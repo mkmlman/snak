@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>0002 · Where are you going?</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../assets/lesson.css" />
+  <style>
+    .phrase { border:1px solid var(--rule); background:var(--bg-elevated); border-radius:var(--radius); padding:1rem 1.1rem; margin:1rem 0; box-shadow:var(--shadow-sm); }
+    .phrase .da { font-family:var(--sans); font-weight:700; font-size:1.35rem; letter-spacing:.01em; color:var(--brand); margin:0 0 .35rem; }
+    .phrase .en { margin:0; font-weight:600; }
+    .phrase .meta { margin-top:.75rem; padding-top:.75rem; border-top:1px dashed var(--rule); font-family:var(--sans); font-size:.88rem; color:var(--muted); }
+    .phrase .meta strong { color:var(--ink-soft); font-weight:600; }
+    .vocab-grid { display:grid; gap:.5rem; margin:1rem 0 1.5rem; }
+    .vocab-grid .row { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:.5rem; font-family:var(--sans); font-size:.9rem; padding:.55rem .65rem; border-radius:var(--radius-sm); background:var(--bg-elevated); border:1px solid var(--rule); }
+    .vocab-grid .row.head { background:transparent; border:none; color:var(--muted); font-size:.75rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding-bottom:0; }
+    .vocab-grid .da { font-weight:700; color:var(--brand); }
+    @media (max-width:640px) { .vocab-grid .row { grid-template-columns:1fr; gap:.15rem; } .vocab-grid .row.head { display:none; } }
+    .dialogue { border-left:3px solid var(--brand); padding:.25rem 0 .25rem 1rem; margin:1.25rem 0; }
+    .dialogue p { margin:.55rem 0; }
+    .dialogue .who { font-family:var(--sans); font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+    .dialogue .line { font-family:var(--sans); font-weight:600; font-size:1.05rem; }
+    .dialogue .gloss { color:var(--muted); font-size:.9rem; }
+    .task-box { border:1px solid var(--border); border-radius:var(--radius); padding:1rem 1.1rem; background:var(--ivory); }
+    .task-box .label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+    .task-box ol { margin:.5rem 0 0; padding-left:1.2rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-inner">
+      <header class="course-header">
+        <div class="meta-row">
+          <span class="badge">Lesson 0002</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Spoken Danish</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>~10 min</span>
+        </div>
+        <h1>Where are you going?</h1>
+        <p class="lede">Ask and answer about where someone is headed — a core small-talk move in the building, on the street, or at work.</p>
+      </header>
+
+      <div class="win">
+        <div class="label">Today's win</div>
+        <p>
+          <strong>Hvor skal du hen? → Jeg skal på arbejde / i Netto / hjem.</strong>
+        </p>
+      </div>
+
+      <h2><span class="num">01</span> Why this matters</h2>
+      <p>
+        Danes ask <em>Hvor skal du hen?</em> the way English speakers ask "How's it going?" — it's a greeting ritual, not a serious interrogation. Having a reply ready makes you sound natural.
+      </p>
+
+      <h2><span class="num">02</span> Key pattern: <em>at skulle</em> + direction</h2>
+      <div class="callout accent">
+        <div class="label">Pattern</div>
+        <p>
+          <strong>Jeg skal + til / på / i + [place]</strong><br />
+          <em>Jeg skal på arbejde</em> (I'm going to work) · <em>Jeg skal i Netto</em> (I'm going to Netto) · <em>Jeg skal til lægen</em> (I'm going to the doctor)
+        </p>
+      </div>
+
+      <h2><span class="num">03</span> Phrase cards</h2>
+
+      <div class="phrase">
+        <p class="da">Hvor skal du hen?</p>
+        <div class="audio-block" data-slug="hvor_skal_du_hen"><audio controls preload="none" src="../assets/audio/hvor_skal_du_hen.mp3"></audio></div><p class="en">Where are you going?</p>
+        <div class="meta"><strong>Word-by-word:</strong> hvor (where) + skal (shall/must) + du (you) + hen (towards) · <strong>Note:</strong> <em>hen</em> adds directionality. Very common in spoken Danish.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Jeg skal på arbejde</p>
+        <div class="audio-block" data-slug="jeg_skal_pa_arbejde"><audio controls preload="none" src="../assets/audio/jeg_skal_pa_arbejde.mp3"></audio></div><p class="en">I'm going to work</p>
+        <div class="meta"><strong>Pattern:</strong> <em>på</em> + arbejde (work). Use <em>på</em> with workplaces and institutions.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Jeg skal i Netto</p>
+        <div class="audio-block" data-slug="jeg_skal_i_netto"><audio controls preload="none" src="../assets/audio/jeg_skal_i_netto.mp3"></audio></div><p class="en">I'm going to Netto (the supermarket)</p>
+        <div class="meta"><strong>Pattern:</strong> <em>i</em> + shop/store name. Also: <em>i skole</em> (to school), <em>i byen</em> (to town/the city).</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Jeg skal hjem</p>
+        <div class="audio-block" data-slug="jeg_skal_hjem"><audio controls preload="none" src="../assets/audio/jeg_skal_hjem.mp3"></audio></div><p class="en">I'm going home</p>
+        <div class="meta"><strong>Note:</strong> <em>hjem</em> (homewards) is an adverb, no preposition needed. <em>Jeg er hjemme</em> = I am (at) home.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Jeg skal til træning</p>
+        <div class="audio-block" data-slug="jeg_skal_til_trning"><audio controls preload="none" src="../assets/audio/jeg_skal_til_trning.mp3"></audio></div><p class="en">I'm going to training / the gym</p>
+        <div class="meta"><strong>Pattern:</strong> <em>til</em> + activities, events, people. <em>Jeg skal til lægen</em> (to the doctor), <em>til fest</em> (to a party).</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Hvad med dig?</p>
+        <div class="audio-block" data-slug="hvad_med_dig"><audio controls preload="none" src="../assets/audio/hvad_med_dig.mp3"></audio></div><p class="en">What about you?</p>
+        <div class="meta">Bounce-back phrase — use this instead of <em>og dig?</em> when talking about plans.</div>
+      </div>
+
+      <h2><span class="num">04</span> Preposition cheat sheet</h2>
+      <div class="vocab-grid" aria-label="Prepositions">
+        <div class="row head"><span>Danish</span><span>Use with</span><span>Example</span></div>
+        <div class="row"><span class="da">på</span><div class="audio-block" data-slug="pa"><audio controls preload="none" src="../assets/audio/pa.mp3"></audio></div><span>workplaces, institutions</span><span>på arbejde, på hospitalet, på universitetet</span></div>
+        <div class="row"><span class="da">i</span><div class="audio-block" data-slug="i"><audio controls preload="none" src="../assets/audio/i.mp3"></audio></div><span>shops, schools, cities</span><span>i Netto, i skole, i byen</span></div>
+        <div class="row"><span class="da">til</span><div class="audio-block" data-slug="til"><audio controls preload="none" src="../assets/audio/til.mp3"></audio></div><span>activities, events, people</span><span>til træning, til fest, til lægen</span></div>
+        <div class="row"><span class="da">—</span><span>home (adverb)</span><span>hjem</span></div>
+      </div>
+
+      <h2><span class="num">05</span> Model dialogue</h2>
+      <div class="dialogue">
+        <p><span class="who">Neighbour</span><br /><span class="line">Hej! Hvor skal du hen?</span>
+        <div class="audio-block" data-slug="hej_hvor_skal_du_hen"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/hej_hvor_skal_du_hen_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/hej_hvor_skal_du_hen_nat.mp3"></audio></span></div><br /><span class="gloss">Hi! Where are you going?</span></p>
+        <p><span class="who">You</span><br /><span class="line">Hej! Jeg skal på arbejde. Hvad med dig?</span>
+        <div class="audio-block" data-slug="hej_jeg_skal_pa_arbejde_hvad_med_dig"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/hej_jeg_skal_pa_arbejde_hvad_med_dig_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/hej_jeg_skal_pa_arbejde_hvad_med_dig_nat.mp3"></audio></span></div><br /><span class="gloss">Hi! I'm going to work. What about you?</span></p>
+        <p><span class="who">Neighbour</span><br /><span class="line">Jeg skal i Netto. Hej hej!</span>
+        <div class="audio-block" data-slug="jeg_skal_i_netto_hej_hej"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/jeg_skal_i_netto_hej_hej_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/jeg_skal_i_netto_hej_hej_nat.mp3"></audio></span></div><br /><span class="gloss">I'm going to Netto. Bye!</span></p>
+        <p><span class="who">You</span><br /><span class="line">Hej hej!</span>
+        <div class="audio-block" data-slug="hej_hej_2"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/hej_hej_2_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/hej_hej_2_nat.mp3"></audio></span></div><br /><span class="gloss">Bye!</span></p>
+      </div>
+
+      <h2><span class="num">06</span> Retrieval practice</h2>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">1. "Where are you going?"</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="correct">Hvor skal du hen?</button>
+          <button type="button" data-answer="wrong">Hvad laver du?</button>
+          <button type="button" data-answer="wrong">Hvor bor du?</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">2. "I'm going to work"</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="wrong">Jeg skal i arbejde</button>
+          <button type="button" data-answer="correct">Jeg skal på arbejde</button>
+          <button type="button" data-answer="wrong">Jeg skal til arbejde</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">3. "I'm going home"</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="wrong">Jeg skal til hjem</button>
+          <button type="button" data-answer="wrong">Jeg skal i hjem</button>
+          <button type="button" data-answer="correct">Jeg skal hjem</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <h2><span class="num">07</span> Real-world task</h2>
+      <div class="task-box">
+        <div class="label">Before next lesson</div>
+        <ol>
+          <li>Say <strong>Hvor skal du hen?</strong> to someone you know.</li>
+          <li>Reply <strong>Jeg skal …</strong> when someone asks you.</li>
+          <li>Notice whether people say <em>hjem</em> or <em>hjemme</em> in context.</li>
+        </ol>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">← Course index</a>
+        <a href="../reference/where-going-cheatsheet.html">Reference · where-going</a>
+        <a href="0003-how-much-hvor-meget-numbers.html">Next · Lesson 0003 →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll("[data-quiz]").forEach((quiz) => {
+      const feedback = quiz.querySelector(".quiz-feedback");
+      const buttons = [...quiz.querySelectorAll(".quiz-options button")];
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.disabled) return;
+          const ok = btn.dataset.answer === "correct";
+          buttons.forEach((b) => { b.disabled = true; if (b.dataset.answer === "correct") b.classList.add("correct"); });
+          if (!ok) btn.classList.add("wrong");
+          feedback.hidden = false;
+          feedback.className = "quiz-feedback " + (ok ? "ok" : "no");
+          feedback.textContent = ok ? "Nice — locked in." : "Not that one — correct option is highlighted.";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>0005 · Ordering food at a cafe</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../assets/lesson.css" />
+  <style>
+    .phrase { border:1px solid var(--rule); background:var(--bg-elevated); border-radius:var(--radius); padding:1rem 1.1rem; margin:1rem 0; box-shadow:var(--shadow-sm); }
+    .phrase .da { font-family:var(--sans); font-weight:700; font-size:1.35rem; letter-spacing:.01em; color:var(--brand); margin:0 0 .35rem; }
+    .phrase .en { margin:0; font-weight:600; }
+    .phrase .meta { margin-top:.75rem; padding-top:.75rem; border-top:1px dashed var(--rule); font-family:var(--sans); font-size:.88rem; color:var(--muted); }
+    .phrase .meta strong { color:var(--ink-soft); font-weight:600; }
+    .vocab-grid { display:grid; gap:.5rem; margin:1rem 0 1.5rem; }
+    .vocab-grid .row { display:grid; grid-template-columns:1.1fr 1fr; gap:.5rem; font-family:var(--sans); font-size:.9rem; padding:.55rem .65rem; border-radius:var(--radius-sm); background:var(--bg-elevated); border:1px solid var(--rule); }
+    .vocab-grid .row.head { background:transparent; border:none; color:var(--muted); font-size:.75rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding-bottom:0; }
+    .vocab-grid .da { font-weight:700; color:var(--brand); }
+    @media (max-width:640px) { .vocab-grid .row { grid-template-columns:1fr; gap:.15rem; } .vocab-grid .row.head { display:none; } }
+    .task-box { border:1px solid var(--border); border-radius:var(--radius); padding:1rem 1.1rem; background:var(--ivory); }
+    .task-box .label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+    .task-box ol { margin:.5rem 0 0; padding-left:1.2rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="page-inner">
+      <header class="course-header">
+        <div class="meta-row">
+          <span class="badge">Lesson 0005</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Spoken Danish</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>~12 min</span>
+        </div>
+        <h1>Ordering food at a cafe</h1>
+        <p class="lede">Order coffee, pastry, or a smørrebrød — and handle the checkout conversation.</p>
+      </header>
+
+      <div class="win">
+        <div class="label">Today's win</div>
+        <p><strong>Jeg vil gerne have en kaffe, tak. → Værsgo. → Mange tak!</strong></p>
+      </div>
+
+      <h2><span class="num">01</span> Why this matters</h2>
+      <p>Cafes are everywhere in Copenhagen. Even a simple order in Danish changes the interaction — Danes genuinely appreciate the effort.</p>
+
+      <h2><span class="num">02</span> Key pattern: <em>Jeg vil gerne have</em></h2>
+      <div class="callout accent">
+        <div class="label">Pattern</div>
+        <p><strong>Jeg vil gerne have</strong> + [item] = "I would like to have" — the standard polite ordering phrase. <em>Vil gerne</em> softens the request (≈ "would like to").</p>
+      </div>
+
+      <h2><span class="num">03</span> Phrase cards</h2>
+
+      <div class="phrase">
+        <p class="da">Jeg vil gerne have en kaffe</p>
+        <div class="audio-block" data-slug="jeg_vil_gerne_have_en_kaffe"><audio controls preload="none" src="../assets/audio/jeg_vil_gerne_have_en_kaffe.mp3"></audio></div><p class="en">I'd like a coffee</p>
+        <div class="meta">Black coffee default. Specify: <em>en kaffe med mælk</em> (with milk), <em>en cortado</em>, <em>en latte</em>.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">En croissant, tak</p>
+        <div class="audio-block" data-slug="en_croissant_tak"><audio controls preload="none" src="../assets/audio/en_croissant_tak.mp3"></audio></div><p class="en">A croissant, please</p>
+        <div class="meta">For food items, you can skip <em>Jeg vil gerne have</em> and just say the item + <em>tak</em>.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Værsgo</p>
+        <div class="audio-block" data-slug="vrsgo"><audio controls preload="none" src="../assets/audio/vrsgo.mp3"></audio></div><p class="en">Here you go / please (handing something)</p>
+        <div class="meta">You'll hear this constantly. Staff say it when handing your order. Also used when offering something: <em>Værsgo</em>.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Skal det være noget andet?</p>
+        <div class="audio-block" data-slug="skal_det_vre_noget_andet"><audio controls preload="none" src="../assets/audio/skal_det_vre_noget_andet.mp3"></audio></div><p class="en">Would you like anything else?</p>
+        <div class="meta">Standard follow-up question from staff. Answer: <em>Nej tak, det var det hele</em> (No thanks, that's all).</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">Det var det hele</p>
+        <div class="audio-block" data-slug="det_var_det_hele"><audio controls preload="none" src="../assets/audio/det_var_det_hele.mp3"></audio></div><p class="en">That's all / that was it</p>
+        <div class="meta">Use this to signal you're done ordering.</div>
+      </div>
+
+      <div class="phrase">
+        <p class="da">God dag!</p>
+        <div class="audio-block" data-slug="god_dag"><audio controls preload="none" src="../assets/audio/god_dag.mp3"></audio></div><p class="en">Have a good day!</p>
+        <div class="meta">Standard friendly send-off. Reply: <em>I lige måde!</em> (likewise!).</div>
+      </div>
+
+      <h2><span class="num">04</span> Mini vocab bank</h2>
+      <div class="vocab-grid" aria-label="Food vocab">
+        <div class="row head"><span>Danish</span><span>English</span></div>
+        <div class="row"><span class="da">en kaffe</span><div class="audio-block" data-slug="en_kaffe"><audio controls preload="none" src="../assets/audio/en_kaffe.mp3"></audio></div><span>a coffee</span></div>
+        <div class="row"><span class="da">en te</span><div class="audio-block" data-slug="en_te"><audio controls preload="none" src="../assets/audio/en_te.mp3"></audio></div><span>a tea</span></div>
+        <div class="row"><span class="da">en øl</span><div class="audio-block" data-slug="en_l"><audio controls preload="none" src="../assets/audio/en_l.mp3"></audio></div><span>a beer</span></div>
+        <div class="row"><span class="da">en croissant</span><div class="audio-block" data-slug="en_croissant"><audio controls preload="none" src="../assets/audio/en_croissant.mp3"></audio></div><span>a croissant</span></div>
+        <div class="row"><span class="da">en smørrebrød</span><div class="audio-block" data-slug="en_smrrebrd"><audio controls preload="none" src="../assets/audio/en_smrrebrd.mp3"></audio></div><span>open-faced sandwich</span></div>
+        <div class="row"><span class="da">en bolle</span><div class="audio-block" data-slug="en_bolle"><audio controls preload="none" src="../assets/audio/en_bolle.mp3"></audio></div><span>a bun / bread roll</span></div>
+        <div class="row"><span class="da">en kanelsnegl</span><div class="audio-block" data-slug="en_kanelsnegl"><audio controls preload="none" src="../assets/audio/en_kanelsnegl.mp3"></audio></div><span>a cinnamon roll</span></div>
+      </div>
+
+      <h2><span class="num">05</span> Model dialogue</h2>
+      <div class="dialogue">
+        <p><span class="who">You</span><br /><span class="line">Hej! Jeg vil gerne have en kaffe, tak.</span>
+        <div class="audio-block" data-slug="hej_jeg_vil_gerne_have_en_kaffe_tak"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/hej_jeg_vil_gerne_have_en_kaffe_tak_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/hej_jeg_vil_gerne_have_en_kaffe_tak_nat.mp3"></audio></span></div><br /><span class="gloss">Hi! I'd like a coffee, please.</span></p>
+        <p><span class="who">Barista</span><br /><span class="line">Værsgo. Skal det være noget andet?</span>
+        <div class="audio-block" data-slug="vrsgo_skal_det_vre_noget_andet"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/vrsgo_skal_det_vre_noget_andet_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/vrsgo_skal_det_vre_noget_andet_nat.mp3"></audio></span></div><br /><span class="gloss">Here you go. Would you like anything else?</span></p>
+        <p><span class="who">You</span><br /><span class="line">Nej tak, det var det hele.</span>
+        <div class="audio-block" data-slug="nej_tak_det_var_det_hele"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/nej_tak_det_var_det_hele_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/nej_tak_det_var_det_hele_nat.mp3"></audio></span></div><br /><span class="gloss">No thanks, that's all.</span></p>
+        <p><span class="who">Barista</span><br /><span class="line">Det bliver 35 kroner.</span>
+        <div class="audio-block" data-slug="det_bliver_35_kroner"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/det_bliver_35_kroner_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/det_bliver_35_kroner_nat.mp3"></audio></span></div><br /><span class="gloss">That'll be 35 kroner.</span></p>
+        <p><span class="who">You</span><br /><span class="line">Tak! God dag!</span>
+        <div class="audio-block" data-slug="tak_god_dag"><span class="audio-pair"><span class="audio-label">slow</span><audio controls preload="none" src="../assets/audio/tak_god_dag_slow.mp3"></audio></span><span class="audio-pair"><span class="audio-label">natural</span><audio controls preload="none" src="../assets/audio/tak_god_dag_nat.mp3"></audio></span></div><br /><span class="gloss">Thanks! Have a good day!</span></p>
+      </div>
+
+      <h2><span class="num">06</span> Retrieval practice</h2>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">1. "I'd like a coffee"</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="wrong">Jeg har en kaffe</button>
+          <button type="button" data-answer="correct">Jeg vil gerne have en kaffe</button>
+          <button type="button" data-answer="wrong">Kaffe, værsgo</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">2. "Here you go" (handing something)</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="wrong">Tak for handlen</button>
+          <button type="button" data-answer="correct">Værsgo</button>
+          <button type="button" data-answer="wrong">Det var det hele</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <div class="quiz" data-quiz>
+        <div class="quiz-q">3. "That's all" (done ordering)</div>
+        <div class="quiz-options">
+          <button type="button" data-answer="correct">Det var det hele</button>
+          <button type="button" data-answer="wrong">God dag</button>
+          <button type="button" data-answer="wrong">Jeg vil gerne have mere</button>
+        </div>
+        <div class="quiz-feedback" hidden></div>
+      </div>
+
+      <h2><span class="num">07</span> Real-world task</h2>
+      <div class="task-box">
+        <div class="label">Before next lesson</div>
+        <ol>
+          <li>Order <strong>Jeg vil gerne have en kaffe, tak</strong> at a cafe.</li>
+          <li>When they hand it to you, listen for <em>Værsgo</em>.</li>
+          <li>Say <strong>Mange tak! God dag!</strong> when leaving.</li>
+        </ol>
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">← Course index</a>
+        <a href="../reference/food-ordering-cheatsheet.html">Reference · food ordering</a>
+        <a href="0006-excuse-me-help-sorry.html">Next · Lesson 0006 →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll("[data-quiz]").forEach((quiz) => {
+      const feedback = quiz.querySelector(".quiz-feedback");
+      const buttons = [...quiz.querySelectorAll(".quiz-options button")];
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.disabled) return;
+          const ok = btn.dataset.answer === "correct";
+          buttons.forEach((b) => { b.disabled = true; if (b.dataset.answer === "correct") b.classList.add("correct"); });
+          if (!ok) btn.classList.add("wrong");
+          feedback.hidden = false;
+          feedback.className = "quiz-feedback " + (ok ? "ok" : "no");
+          feedback.textContent = ok ? "Nice — locked in." : "Not that one — correct option is highlighted.";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
