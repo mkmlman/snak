@@ -19,11 +19,9 @@ REFERENCE_DIR = PUBLISH / "reference"
 
 AUDIO_DISCLAIMER = """\
       <div class="audio-disclaimer" role="note">
-        <strong>Audio:</strong> Browser-generated Danish (Web Speech API).
-        Quality depends on your system's Danish voice.
-        Helpful for rhythm and recognition — may not perfectly match native Copenhagen pronunciation.
-        Prefer what you hear from neighbours when the two differ.
-        For static files, run the TTS version of &lt;code&gt;tools/gen_audio.py&lt;/code&gt; locally.
+        <strong>Audio:</strong> Your browser speaks the Danish for you.
+        Quality depends on the Danish voice on your device, so it might not match how Copenhageners actually sound.
+        Listen to neighbours, not the robot.
       </div>"""
 
 
@@ -46,8 +44,12 @@ def strip_toggle(html: str) -> str:
 
 
 def inject_disclaimer(html: str) -> str:
-    if 'class="audio-disclaimer"' in html:
-        return html
+    old_re = re.compile(
+        r'<div class="audio-disclaimer"[^>]*>.*?</div>',
+        re.DOTALL,
+    )
+    if old_re.search(html):
+        return old_re.sub(AUDIO_DISCLAIMER, html)
     return html.replace(
         '      </header>\n\n<div class="win"',
         f"      </header>\n{AUDIO_DISCLAIMER}\n\n<div class=\"win\"",
