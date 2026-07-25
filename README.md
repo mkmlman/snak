@@ -34,12 +34,12 @@ Machine-generated TTS (`edge-tts` · `da-DK-ChristelNeural`) for every Danish ph
 - **Phrase cards / vocab**: single-speed playback
 - **Dialogue lines**: slow + natural speed pair
 
-Audio files at `assets/audio/<slug>.mp3`, served relative.
+Audio files at `docs/assets/audio/<slug>.mp3`, served relative.
 
 ## Run
 
 ```bash
-python3 -m http.server 8788
+python3 -m http.server 8788 -d docs
 ```
 
 No build step, no dependencies. Open `http://localhost:8788`.

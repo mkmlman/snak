@@ -12,10 +12,11 @@ from pathlib import Path
 import edge_tts
 
 ROOT = Path(__file__).resolve().parent.parent
-AUDIO_DIR = ROOT / "assets" / "audio"
+PUBLISH = ROOT / "docs"
+AUDIO_DIR = PUBLISH / "assets" / "audio"
 VOICE = "da-DK-ChristelNeural"
-LESSONS_DIR = ROOT / "lessons"
-REFERENCE_DIR = ROOT / "reference"
+LESSONS_DIR = PUBLISH / "lessons"
+REFERENCE_DIR = PUBLISH / "reference"
 
 AUDIO_DISCLAIMER = """\
       <div class="audio-disclaimer" role="note">
