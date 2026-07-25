@@ -613,10 +613,37 @@ td strong { color: var(--near-black); }
 
 .teacher p { margin: 0; color: var(--dark-warm); }
 
+/* —— Scroll indicator —— */
+.scr {
+  position: fixed;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.2;
+  transition: opacity 0.25s;
+}
+.scr:hover { opacity: 0.5; }
+.scr-d {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--brand);
+  opacity: 0.25;
+  transition: opacity 0.15s;
+}
+.scr-d.on { opacity: 0.9; }
+
 /* —— Print —— */
 @media print {
   .audio-disclaimer,
-  .spk-wrap {
+  .spk-wrap,
+  .scr {
     display: none !important;
   }
 

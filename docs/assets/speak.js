@@ -1,6 +1,34 @@
 (function () {
   if (!window.speechSynthesis) return;
 
+  // —— Scroll indicator ——
+  (function () {
+    var markers = document.querySelectorAll(".da, .line");
+    if (markers.length < 3) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "scr";
+    markers.forEach(function () {
+      var d = document.createElement("i");
+      d.className = "scr-d";
+      wrap.appendChild(d);
+    });
+    document.body.appendChild(wrap);
+
+    var dots = wrap.querySelectorAll(".scr-d");
+
+    function tick() {
+      var cx = window.innerHeight / 2;
+      for (var i = 0; i < markers.length; i++) {
+        var r = markers[i].getBoundingClientRect();
+        var active = r.top < cx && r.bottom > cx;
+        dots[i].classList.toggle("on", active);
+      }
+    }
+    window.addEventListener("scroll", tick, { passive: true });
+    tick();
+  })();
+
   var SPEAKER =
     '<svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M9.5 2.5v15a.5.5 0 01-.5.5H6l-4-4H1a1 1 0 01-1-1V7a1 1 0 011-1h3l4-4a.5.5 0 01.5.5z"/><path d="M13 6.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M15.5 4a7 7 0 010 12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
 
