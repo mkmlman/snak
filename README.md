@@ -30,11 +30,9 @@ Each lesson has: phrase cards, model dialogue, retrieval quiz, production practi
 
 ## Audio
 
-Machine-generated TTS (`edge-tts` · `da-DK-ChristelNeural`) for every Danish phrase:
-- **Phrase cards / vocab**: single-speed playback
-- **Dialogue lines**: slow + natural speed pair
+Browser-generated Danish (Web Speech API) — click the speaker icon next to any phrase. A **slow** option is available for all phrases. Requires a system Danish voice.
 
-Audio files at `docs/assets/audio/<slug>.mp3`, served relative.
+> If you prefer static audio files (offline use, consistent quality): install `edge-tts`, run the previous version of `tools/gen_audio.py` (which includes TTS generation) to produce MP3s and reinject `<audio>` controls.
 
 ## Run
 
@@ -44,16 +42,16 @@ python3 -m http.server 8788 -d docs
 
 No build step, no dependencies. Open `http://localhost:8788`.
 
-### Generate audio
+### Prepare pages
 
 ```bash
 uv run tools/gen_audio.py
 ```
 
-Regenerates all TTS files and reinjects audio blocks. Requires `uv` + Python 3.13+.
+Strips any stale audio blocks and injects the `speak.js` script. Run after editing lesson or reference HTML.
 
 ## Stack
 
 - Static HTML + CSS (Kami palette in `assets/lesson.css`)
-- Python 3.13, `uv`, `edge-tts`
+- Python 3.13 · `uv` · `edge-tts` *(all optional — only needed for page preparation or static audio generation)*
 - Zero frameworks, zero build tools

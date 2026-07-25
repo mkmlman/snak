@@ -3,6 +3,10 @@
 
 Strips audio-block divs and injects speak.js script.
 Usage: uv run tools/gen_audio.py
+
+To restore static MP3 playback (edge-tts), revert this file from
+git history and run again — it will regenerate TTS audio and
+reinject <audio> controls.
 """
 
 import re
@@ -15,9 +19,11 @@ REFERENCE_DIR = PUBLISH / "reference"
 
 AUDIO_DISCLAIMER = """\
       <div class="audio-disclaimer" role="note">
-        <strong>Audio:</strong> Machine-generated Danish (edge-tts · da-DK-ChristelNeural).
+        <strong>Audio:</strong> Browser-generated Danish (Web Speech API).
+        Quality depends on your system's Danish voice.
         Helpful for rhythm and recognition — may not perfectly match native Copenhagen pronunciation.
         Prefer what you hear from neighbours when the two differ.
+        For static files, run the TTS version of &lt;code&gt;tools/gen_audio.py&lt;/code&gt; locally.
       </div>"""
 
 
