@@ -451,6 +451,52 @@ td strong { color: var(--near-black); }
 .quiz-feedback.ok { color: var(--good); }
 .quiz-feedback.no { color: var(--bad); }
 
+/* —— Speaker icon (Google-style) —— */
+.spk-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.spk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: var(--stone);
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+  vertical-align: middle;
+}
+.spk:hover {
+  color: var(--brand);
+  background: var(--brand-tint);
+}
+.spk:active {
+  transform: translateY(1px);
+}
+.spk-slow {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stone);
+  padding: 0.08rem 0.22rem;
+  border-radius: 3px;
+  transition: color 0.12s, background 0.12s;
+}
+.spk-slow:hover {
+  color: var(--brand);
+  background: var(--brand-tint);
+  text-decoration: none;
+}
+
 /* —— Nav links —— */
 .course-footer {
   margin-top: 3.25rem;
@@ -505,37 +551,6 @@ td strong { color: var(--near-black); }
 .audio-disclaimer strong {
   color: var(--near-black);
   font-weight: 600;
-}
-
-.audio-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.85rem;
-  align-items: center;
-  margin: 0.4rem 0 0.15rem;
-}
-
-.audio-block audio {
-  display: block;
-  height: 2rem;
-  max-width: min(100%, 18rem);
-  vertical-align: middle;
-}
-
-.audio-pair {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.audio-label {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--stone);
-  min-width: 3.4rem;
 }
 
 /* —— Compare panels —— */
@@ -600,8 +615,8 @@ td strong { color: var(--near-black); }
 
 /* —— Print —— */
 @media print {
-  .audio-block,
-  .audio-disclaimer {
+  .audio-disclaimer,
+  .spk-wrap {
     display: none !important;
   }
 
