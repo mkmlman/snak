@@ -32,18 +32,55 @@
   var SPEAKER =
     '<svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path d="M9.5 2.5v15a.5.5 0 01-.5.5H6l-4-4H1a1 1 0 01-1-1V7a1 1 0 011-1h3l4-4a.5.5 0 01.5.5z"/><path d="M13 6.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M15.5 4a7 7 0 010 12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>';
 
+  // —— Voice loading (must wait for voiceschanged on mobile) ——
+  var danishVoice = null;
+
+  function loadVoices() {
+    var voices = speechSynthesis.getVoices();
+    if (voices.length > 0) {
+      danishVoice = voices.find(function (v) {
+        return v.lang.startsWith("da");
+      });
+    }
+  }
+
+  loadVoices();
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = loadVoices;
+  }
+
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+              (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  var currentUtterance = null;
+
   function speak(text, rate) {
     if (!text) return;
-    window.speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(text);
-    u.lang = "da-DK";
-    u.rate = rate || 0.9;
-    var voices = speechSynthesis.getVoices();
-    var dv = voices.find(function (v) {
-      return v.lang.startsWith("da");
-    });
-    if (dv) u.voice = dv;
-    speechSynthesis.speak(u);
+
+    // iOS: cancel + speak in same call stack silently fails
+    if (isIOS && speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = "da-DK";
+      currentUtterance.rate = rate || 0.9;
+      if (danishVoice) currentUtterance.voice = danishVoice;
+      setTimeout(function () { speechSynthesis.speak(currentUtterance); }, 50);
+      return;
+    }
+
+    if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+    }
+
+    if (speechSynthesis.paused) {
+      speechSynthesis.resume();
+    }
+
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    currentUtterance.lang = "da-DK";
+    currentUtterance.rate = rate || 0.9;
+    if (danishVoice) currentUtterance.voice = danishVoice;
+    speechSynthesis.speak(currentUtterance);
   }
 
   function icon() {
